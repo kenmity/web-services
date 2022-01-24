@@ -22,3 +22,11 @@ docker-compose up -d web php mariadb myadmin memcached
 
 
 `config/mariadb/data/db`
+
+> 參考來源
+
+https://github.com/nanoninja/docker-nginx-php-mysql
+
+> 使用套件
+
+https://github.com/mlocati/docker-php-extension-installer

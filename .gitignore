@@ -1,0 +1,3 @@
+config/mariadb/data/db
+config/mysql/data/db
+vhost/sosoblog

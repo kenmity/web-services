@@ -18,15 +18,24 @@ docker build -t self-php7.4 . --no-cache
 docker-compose up -d web php mariadb myadmin memcached  
 ```
 
+> 說明
+
+vhost是專案放置目錄，透過config/nginx/templates/*.templates 
+來區分專案，也就是可以放很多的專案。
+另外本機需設定host,此方案是安裝於mac os 
+
+
 > 資料庫位置這邊會需要先建立空的資料夾
 
-
 `config/mariadb/data/db`
+
 
 > 參考來源
 
 https://github.com/nanoninja/docker-nginx-php-mysql
 
+
 > 使用套件
 
 https://github.com/mlocati/docker-php-extension-installer
+

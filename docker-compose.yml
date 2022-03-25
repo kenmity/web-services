@@ -4,7 +4,7 @@ services:
     image: self-nginx
     volumes:
       - "./config/nginx/templates:/etc/nginx/templates"
-      - "./vhost:/var/www/"
+      - "./../vhost:/var/www/"
       - "./config/ssl:/etc/ssl"
     ports:
       - "8080:80"
@@ -20,7 +20,7 @@ services:
     image: self-php7.4
     volumes:
       - "./config/php/php.ini:/usr/local/etc/php/conf.d/php.ini"   
-      - "./vhost:/var/www/"
+      - "./../vhost:/var/www/"
   # mysqldb:
   #       image: mysql:${MYSQL_VERSION}
   #       container_name: ${MYSQL_HOST}

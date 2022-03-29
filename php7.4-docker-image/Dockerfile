@@ -2,7 +2,7 @@ FROM php:7.4-fpm
 
 ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions /usr/local/bin/
 RUN chmod +x /usr/local/bin/install-php-extensions && \
-    install-php-extensions igbinary msgpack imagick memcached gd mysqli memcache
+    install-php-extensions igbinary msgpack imagick memcached gd mysqli memcache redis
 
 # RUN apt-get install memcached
 # RUN apt-get install php-memcached

@@ -15,7 +15,8 @@ services:
     depends_on:
       - php   
       - memcached
-      - mariadb  
+      - mariadb 
+      - redis 
   php:
     image: self-php7.4
     volumes:
@@ -67,4 +68,11 @@ services:
         command:
           - '-m 30'
         ports:
-          - '22122:11211'                       
+          - '22122:11211'
+  redis:
+        image: redis:latest
+        container_name: redis
+        volumes:
+          - "./config/redis/redis.conf:/usr/local/etc/redis/redis.conf"  
+        ports:
+          - '6378:6379'                               

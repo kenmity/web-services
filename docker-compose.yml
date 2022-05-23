@@ -13,9 +13,9 @@ services:
       - NGINX_HOST=localhost
       - NGINX_PORT=80 
     depends_on:
+      - mariadb 
       - php   
       # - memcached
-      - mariadb 
       - redis 
   php:
     image: self-php8.0

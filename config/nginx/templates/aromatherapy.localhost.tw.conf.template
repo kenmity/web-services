@@ -3,12 +3,12 @@
 server {
     listen 80;
     listen [::]:80;
-    server_name demoAdmin.localhost.tw;
+    server_name aromatherapy.localhost.tw;
 
     index index.php index.html;
     error_log  /var/log/nginx/error.log;
     access_log /var/log/nginx/access.log;
-    root /var/www/demoAdmin/public;
+    root /var/www/aromatherapy;
 
     set $virtualdir "";
     set $realdir "";
@@ -37,7 +37,7 @@ server {
 }
 
 server {
-     server_name demoAdmin.localhost.tw;
+     server_name aromatherapy.localhost.tw;
 
      listen 443 ssl;
      fastcgi_param HTTPS on;
@@ -49,7 +49,7 @@ server {
      index index.php index.html;
      error_log  /var/log/nginx/error.log;
      access_log /var/log/nginx/access.log;
-     root /var/www/demoAdmin/public;
+     root /var/www/aromatherapy;
 
      location / {
          try_files $uri $uri/ /index.php?$query_string;
